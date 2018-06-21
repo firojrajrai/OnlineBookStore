@@ -1,0 +1,20 @@
+@CHARSET "ISO-8859-1";
+a:LINK{
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+	font-size:20px;azimuth: 
+	text-decoration:none;
+}
+
+a:VISITED {
+	color:white;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+a:HOVER {
+	color:blue;
+	text-decoration: blink;
+}

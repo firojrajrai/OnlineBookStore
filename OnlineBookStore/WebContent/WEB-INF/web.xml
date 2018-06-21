@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>BookStore</display-name>
+  <servlet>
+    <servlet-name>jlcBookServlet</servlet-name>
+    <servlet-class>com.jlc.book.shop.servlet.JLCBookShopServlet</servlet-class>
+  </servlet>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>JLCBookServlet</display-name>
+    <servlet-name>JLCBookServlet</servlet-name>
+    <servlet-class>com.jlc.book.shop.servlet.JLCBookShopServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JLCBookServlet</servlet-name>
+    <url-pattern>*.jlc</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>com.jlc.book.shop.listener.JlcindiaContextListener</listener-class>
+  </listener>
+  <filter>
+    <display-name>sessionFilter</display-name>
+    <filter-name>sessionFilter</filter-name>
+    <filter-class>com.jlc.book.shop.filter.SessionValidatorFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>sessionFilter</filter-name>
+    <url-pattern>*.jlc</url-pattern>
+  </filter-mapping>
+  </web-app>
